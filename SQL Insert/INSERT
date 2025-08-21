@@ -1,0 +1,25 @@
+INSERT INTO clientes (nombre, direccion, telefono, email) VALUES
+('María López', 'Col. Kennedy, Tegucigalpa', '9876-1234', 'maria.lopez@gmail.com'),
+('Carlos Ramírez', 'Barrio El Centro, San Pedro Sula', '9988-4567', 'carlos.ramirez@hotmail.com'),
+('Ana Torres', 'Col. Las Colinas, Comayagua', '9877-8910', 'ana.torres@yahoo.com'
+);
+INSERT INTO transportistas (nombre, telefono, vehiculo) VALUES
+('José Hernández', '9856-2345', 'Camión Ford F-150'),
+('Luis Martínez', '9989-5678', 'Motocicleta Yamaha'),
+('Pedro Sánchez', '9870-1122', 'Van Toyota Hiace'
+);
+INSERT INTO envios (id_cliente, codigo_rastreo, direccion_origen, direccion_destino, estado) VALUES
+(1, 'TRK001HND', 'Bodega Central Tegucigalpa', 'Col. Kennedy, Tegucigalpa', 'En tránsito'),
+(2, 'TRK002HND', 'Sucursal San Pedro Sula', 'Barrio El Centro, San Pedro Sula', 'Pendiente de entrega'),
+(3, 'TRK003HND', 'Sucursal Comayagua', 'Col. Las Colinas, Comayagua', 'En proceso'
+);
+INSERT INTO paquetes (id_envio, descripcion, peso, dimensiones) VALUES
+(1, 'Electrodoméstico - Microondas', 12.50, '50x40x35 cm'),
+(2, 'Caja con ropa y zapatos', 8.20, '60x45x40 cm'),
+(3, 'Documentos y papelería', 2.00, '30x25x10 cm'
+);
+INSERT INTO seguimiento (id_envio, id_transportista, ubicacion, estado) VALUES
+(1, 1, 'Carretera Tegucigalpa - SPS', 'En tránsito'),
+(1, 3, 'Sucursal SPS - en bodega', 'En bodega regional'),
+(2, 2, 'Carretera SPS - Centro', 'En camino a destino'),
+(3, 1, 'Sucursal Comayagua', 'En proceso de clasificación'
